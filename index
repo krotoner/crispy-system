@@ -1,1 +1,81 @@
-hello world
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка — Иван Иванов, Веб-разработчик</title>
+    <meta name="description" content="Персональный сайт-визитка веб-разработчика Ивана Иванова. Контакты, краткая биография, услуги.">
+    <meta name="keywords" content="визитка, веб-разработчик, Ivan Ivanov, контакты, услуги">
+    <meta name="author" content="Иван Иванов">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Визитка — Иван Иванов">
+    <meta property="og:description" content="Персональный сайт-визитка веб-разработчика Ивана Иванова.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://example.com/img/profile.jpg">
+
+    <!-- Schema.org Microdata -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Иван Иванов",
+      "url": "https://example.com",
+      "image": "https://example.com/img/profile.jpg",
+      "jobTitle": "Веб-разработчик",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "email": "ivan.ivanov@example.com",
+      "telephone": "+7 900 000-00-00",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Москва",
+        "addressCountry": "Россия"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Иван Иванов</h1>
+        <p>Веб-разработчик. <span itemprop="jobTitle">Фриланс, Москва</span></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+    <main itemscope itemtype="https://schema.org/Person">
+        <section id="about">
+            <h2>Обо мне</h2>
+            <img itemprop="image" src="img/profile.jpg" alt="Фото Иван Иванов" width="120">
+            <p itemprop="description">Профессиональный веб-разработчик с опытом более 5 лет, специализируюсь на создании современных и эффективных сайтов для бизнеса и частных клиентов.</p>
+        </section>
+        <section id="services">
+            <h2>Услуги</h2>
+            <ul>
+                <li>Разработка сайта «под ключ»</li>
+                <li>SEO и оптимизация</li>
+                <li>Техническая поддержка</li>
+            </ul>
+        </section>
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <p>Email: <a href="mailto:ivan.ivanov@example.com" itemprop="email">ivan.ivanov@example.com</a></p>
+            <p>Телефон: <a href="tel:+79000000000" itemprop="telephone">+7 900 000-00-00</a></p>
+            <p>Город: <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Москва</span>, <span itemprop="addressCountry">Россия</span>
+            </span></p>
+        </section>
+    </main>
+    <footer>
+        <small>© 2025 Иван Иванов</small>
+    </footer>
+</body>
+</html>
